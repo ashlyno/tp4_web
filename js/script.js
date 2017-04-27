@@ -257,7 +257,6 @@ $(function() {
                     .attr('stroke',function(d){
                         return colorScale(d.country_area);
                     });
-                circles.remove().exit();
 
             // Do a data-join (enter, update, exit) draw text
            var texts = g.selectAll('.text')
@@ -278,7 +277,6 @@ $(function() {
                     .text(function(d){
                         return d.country_area + ': ' + d3.format(".3s")(d.value)});
 
-                    texts.remove().exit();
         }
 
         /* ********************************** Event listener  ********************************** */
